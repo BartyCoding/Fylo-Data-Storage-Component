@@ -7,10 +7,6 @@
     user-select: none;
 }
 
-html {
-    /* min-width: 265px; */
-}
-
 body {
     display: flex;
     flex-direction: column;
