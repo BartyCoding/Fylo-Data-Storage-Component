@@ -7,6 +7,10 @@
     user-select: none;
 }
 
+html {
+    /* min-width: 265px; */
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -30,8 +34,15 @@ main {
     align-items: center;
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .top {
-    min-width: 350px;
+    /* min-width: 350px; */
     max-width: 450px;
     width: 80vw;
     height: 12.5em;
@@ -49,18 +60,20 @@ main {
 
 .icons {
     margin-top: 1.5em;
-    width: 15em;
+    width: 70%;
+    min-width: 150px;
+    max-width: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .icons .icon-bg {
-    height: 50px;
-    width: 50px;
+    width: 27.5%;
+    aspect-ratio: 1/1;
     background-color: hsl(229, 57%, 11%);
     border-radius: 10px;
-    padding: 10px;
+    padding: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,7 +100,7 @@ main {
     border-radius: 10px;
     background-color: hsl(228, 56%, 26%);
     width: 80vw;
-    min-width: 350px;
+    /* min-width: 350px; */
     max-width: 450px;
     height: auto;
     display: flex;
@@ -101,6 +114,7 @@ main {
 .bottom p {
     color: rgba(255, 255, 255, 0.65);
     font-size: 0.95em;
+    text-align: center;
 }
 
 .storage-space {
@@ -154,7 +168,7 @@ main {
     position: absolute;
     bottom: -2.5em;
     background-color: white;
-    padding: 1em 2em;
+    padding: 2.5% 7.5%;
     border-radius: 10px;
 }
 
@@ -170,20 +184,27 @@ main {
 }
 
 @media (min-width: 700px) {
-    * {
-        font-size: 12px;;
-    }
     .background-image {
         height: 50vh;
         bottom: 0;
         content: url("images/bg-desktop.png");
     }
     main {
-        flex-direction: row;
+        /* flex-direction: row; */
         width: 100vw;
-        height: 62.5vh;
-        align-items: flex-end;
+        /* height: 62.5vh; */
+        /* align-items: flex-end; */
     }
+
+    .main-container {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
     .top {
         min-width: 0;
         max-width: 500px;
@@ -209,6 +230,7 @@ main {
     }
 
     .bottom {
+        margin-top: 2.5em;
         min-width: 0;
         max-width: 600px;
         width: 45vw;
